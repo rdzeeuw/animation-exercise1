@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sky {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(180deg, rgb(193, 231, 252), white);
+}
+
+.water {
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(180deg, rgb(18, 168, 227), blue);
+    animation-name: water;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+
+@keyframes water{
+    0%{
+        margin-top: 0;
+    }
+    50%{
+        margin-top: 5px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+.sun {
+    background: rgba(252, 208, 50, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 30px 30px rgba(252, 208, 50, 0.9);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 75px;
+    left: 150px;
+    animation-name: sun;
+    animation-duration: 3s;
+    animation-timing-function: ;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sun {
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    50%{
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 0 20px 20px rgba(252, 208, 50, 0.9);
+        background: rgba(252, 208, 50, 0.9);
+    }
+}
+
+.cloud img{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 50px;
+    left: -400px;
+    animation-name: cloud;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(1200px);
+    }
+}
+
+.fish img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    animation-name: fish;
+    animation-duration: 7s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fish{
+    0%{
+        transform: translate(-300px, 0px);
+    }
+    35%{
+        transform: translate(200px, -100px), rotateZ(-40deg);
+    }
+    50%{
+        transform: translate(300px, -300px) rotate(-40deg);
+    }
+    75%{
+        transform: translate(500px, -200px) rotate(20deg);
+    }
+    100%{
+        transform: translate(1000px, -100px) rotate(0deg);
+    }
+}
